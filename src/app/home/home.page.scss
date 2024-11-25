@@ -1,27 +1,52 @@
-#container {
+ion-content {
+  --background: #f0f0f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+ion-card {
+  width: 90%;
+  max-width: 400px;
+  border-radius: 20px; /* Mais arredondado */
+  --background: #ffffff;
+  --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra mais pronunciada */
+}
+
+ion-card-header {
+  background-color: #007bff;
+  color: white;
   text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  border-top-left-radius: 20px; /* Bordas arredondadas */
+  border-top-right-radius: 20px; /* Bordas arredondadas */
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+ion-card-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 15px 0; /* Mais espaçamento */
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+ion-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Mais espaçamento entre os botões */
+  padding: 20px; /* Espaçamento interno */
 }
 
-#container a {
-  text-decoration: none;
+ion-button {
+  --border-radius: 20px; /* Botões arredondados */
+  --background: #007bff;
+  --color: white;
+  height: 50px; /* Aumentar a altura dos botões */
+  font-size: 18px; /* Aumentar o tamanho da fonte */
 }

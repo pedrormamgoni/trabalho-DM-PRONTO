@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Registrar-se</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="register-container">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Saúde e Bem-Estar - Registrar</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <form (submit)="register()">
+          <ion-item>
+            <ion-label position="floating">Email</ion-label>
+            <ion-input type="email" [(ngModel)]="email" name="email" required></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Senha</ion-label>
+            <ion-input type="password" [(ngModel)]="password" name="password" required></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Confirme a Senha</ion-label>
+            <ion-input type="password" [(ngModel)]="confirmPassword" name="confirmPassword" required></ion-input>
+          </ion-item>
+          <ion-button expand="full" type="submit">Registrar</ion-button>
+        </form>
+        <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
+        <ion-button expand="full" fill="outline" routerLink="/login">Já tem uma conta? Entrar</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
